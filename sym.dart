@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Symptoms());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
+      home: Symptoms(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class Symptoms extends StatelessWidget {
   final List<String> symptoms = [
     'Cramps',
     'Headache',
@@ -23,11 +23,15 @@ class MyHomePage extends StatelessWidget {
   ];
 
   final Map<String, List<String>> remedies = {
-    'Cramps': ['Avoid caffeine drinks and exercise. Avoid using medicine as long as the pain is bearable.'],
+    'Cramps': [
+      'Avoid caffeine drinks and exercise. Avoid using medicine as long as the pain is bearable.'
+    ],
     'Headache': ['add for headache'],
-    'Bloating': ['Keep your body hydrated and avoid salty foods. Gentle exercise would also help.'],
+    'Bloating': [
+      'Keep your body hydrated and avoid salty foods. Gentle exercise would also help.'
+    ],
     'Vomiting': ['add for vomiting'],
-    'Mild fever':['add for fever'],
+    'Mild fever': ['add for fever'],
   };
 
   @override
@@ -40,12 +44,12 @@ class MyHomePage extends StatelessWidget {
             'COMMON SYMPTOMS',
             style: TextStyle(
               fontSize: 20,
-              fontFamily: 'Cursive',
+              fontFamily: 'Arial',
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
           ),
-          backgroundColor: Colors.pink[700],
+          backgroundColor: Colors.blue[900],
           elevation: 10.0,
           centerTitle: true,
         ),
@@ -55,7 +59,10 @@ class MyHomePage extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [const Color.fromARGB(255, 251, 204, 221), const Color.fromARGB(255, 249, 172, 198)],
+            colors: [
+              Color.fromARGB(255, 204, 236, 251),
+              Color.fromARGB(255, 55, 116, 142)
+            ],
           ),
         ),
         child: ListView.builder(
@@ -93,3 +100,4 @@ class MyHomePage extends StatelessWidget {
         .toList();
   }
 }
+
